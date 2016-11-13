@@ -1,0 +1,22 @@
+<div class="container-fluid">
+    <h2><span data-translate="roommateApp.easyroommate.home.title">Imformation of Map</span></h2>
+    <br/>Address : <span> {{vm.easyroommate.address}}</span>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">    
+    	
+        <ng-map zoom="18" center="{{vm.easyroommate.address}}" style="width:50%; height:320px">
+      		<marker position="{{vm.easyroommate.address}}" title="{{address}}"></marker>   
+    	</ng-map>
+    	 <input places-auto-complete size=80
+    ng-model="vm.address"
+    component-restrictions="{country:'vn'}"
+    on-place-changed="vm.placeChanged()" />
+     
+      	</dl>
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span data-translate="entity.action.back"> Back</span>
+    </button>
+
+</div>

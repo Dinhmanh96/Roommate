@@ -1,0 +1,10 @@
+version: '2'
+services:
+    roommate-elasticsearch:
+        container_name: roommate-elasticsearch
+        image: elasticsearch:2.4.0
+        # volumes:
+        #     - ~/volumes/jhipster/roommate/elasticsearch/:/usr/share/elasticsearch/data/
+        ports:
+            - 9200:9200
+            - 9300:9300

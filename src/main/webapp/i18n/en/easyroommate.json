@@ -1,0 +1,31 @@
+{
+    "roommateApp": {
+        "easyroommate" : {
+            "home": {
+                "title": "Easyroommates",
+                "createLabel": "I have a room",
+                "createOrEditLabel": "Edit room",
+                "searchRoom":"I want a room",
+                "search": "Search"
+            },
+            "created": "A new Easyroommate is created with identifier {{ param }}",
+            "updated": "A Easyroommate is updated with identifier {{ param }}",
+            "deleted": "A Easyroommate is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Easyroommate {{ id }}?"
+            },
+            "detail": {
+                "title": "Easyroommate"
+            },
+            "name": "Name",
+            "address": "Address",
+            "phone": "Phone",
+            "rent_per_a_month": "Rent Per A Month",
+            "property_type": "Property Type",
+            "age_range": "Age Range",
+            "gender": "Gender",
+            "more_infomation": "More Infomation",
+            "search": "Search"
+        }
+    }
+}

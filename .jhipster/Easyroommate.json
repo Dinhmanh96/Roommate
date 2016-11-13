@@ -1,0 +1,47 @@
+{
+    "fluentMethods": true,
+    "relationships": [],
+    "fields": [
+        {
+            "fieldName": "name",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "address",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "phone",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "rent_per_a_month",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "property_type",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "age_range",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "gender",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "more_infomation",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "search",
+            "fieldType": "String"
+        }
+    ],
+    "changelogDate": "20161030075330",
+    "dto": "no",
+    "service": "no",
+    "entityTableName": "easyroommate",
+    "pagination": "no"
+}

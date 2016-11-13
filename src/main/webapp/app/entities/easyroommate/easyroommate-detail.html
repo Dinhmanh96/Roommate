@@ -1,0 +1,55 @@
+
+<div>
+    <h2><span data-translate="roommateApp.easyroommate.detail.title">Easyroommate</span> {{vm.easyroommate.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span data-translate="roommateApp.easyroommate.name">Name</span></dt>
+        <dd>
+            <span>{{vm.easyroommate.name}}</span>
+        </dd>
+        <dt><span data-translate="roommateApp.easyroommate.address">Address</span></dt>
+        <dd>
+            <span>{{vm.easyroommate.address}}</span>
+        </dd>
+        <dt><span data-translate="roommateApp.easyroommate.phone">Phone</span></dt>
+        <dd>
+            <span>{{vm.easyroommate.phone}}</span>
+        </dd>
+        <dt><span data-translate="roommateApp.easyroommate.rent_per_a_month">Rent Per A Month</span></dt>
+        <dd>
+            <span>{{vm.easyroommate.rent_per_a_month}}</span>
+        </dd>
+        <dt><span data-translate="roommateApp.easyroommate.property_type">Property Type</span></dt>
+        <dd>
+            <span>{{vm.easyroommate.property_type}}</span>
+        </dd>
+        <dt><span data-translate="roommateApp.easyroommate.age_range">Age Range</span></dt>
+        <dd>
+            <span>{{vm.easyroommate.age_range}}</span>
+        </dd>
+        <dt><span data-translate="roommateApp.easyroommate.gender">Gender</span></dt>
+        <dd>
+            <span>{{vm.easyroommate.gender}}</span>
+        </dd>
+        <dt><span data-translate="roommateApp.easyroommate.more_infomation">More Infomation</span></dt>
+        <dd>
+            <span>{{vm.easyroommate.more_infomation}}</span>
+        </dd>
+        <dt><span data-translate="roommateApp.easyroommate.search">Search</span></dt>
+        <dd>
+            <span>{{vm.easyroommate.search}}</span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span data-translate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button" ui-sref="easyroommate-detail.edit({id:vm.easyroommate.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-xs hidden-sm" data-translate="entity.action.edit"> Edit</span>
+    </button>
+</div>

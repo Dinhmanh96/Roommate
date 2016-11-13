@@ -1,0 +1,131 @@
+<div>
+    <h2 data-translate="roommateApp.easyroommate.home.title">Easyroommates</h2>
+    <jhi-alert></jhi-alert>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-3 no-padding-left">
+            <div class="form-group">
+            	<form name="searchForm" class="form-inline">
+                    <div class="input-group pull-right" >
+                        <input type="text" class="form-control" ng-model="vm.searchQuery" id="searchQuery" placeholder="{{ 'roommateApp.easyroommate.home.search' | translate }}">
+                        <span  class="input-group-btn width-min" >
+                            <button class="btn btn-info" ng-click="vm.search(vm.searchQuery)">
+                                <span class="glyphicon glyphicon-search"></span>
+                            </button>
+                        </span>
+                        <span class="input-group-btn width-min" ng-if="vm.currentSearch">
+                            <button class="btn btn-info" ng-click="vm.clear()">
+                                <span class="glyphicon glyphicon-trash"></span>
+                            </button>
+                        </span>
+                    </div>
+                </form>
+                </div>
+                
+                <div class="form-group">
+                	<label class="control-label">Gender:</label></br>
+                    
+                	<button class="btn btn-danger">Female</button>
+                	<button class="btn btn-info">Male</button>
+                	<p>{{vm.female}}</p>
+                </div>
+                <div class="form-group">
+                	<label class="control-label">Rent Per A Month(vnd):</label></br>
+                	<select class="form-control">
+                		<option>0-500.000</option>
+                		<option>500.000-1.000.000</option>
+                		<option>1.000.000-2.000.000</option>
+                		<option>2.000.000-3.000.000</option>
+                		<option>>3.000.000</option>
+                	</select>
+                </div>
+                <div class="form-group">
+                	<label class="control-label">Property Type:</label></br>
+                	<button class="btn btn-default">House</button>
+                	<button class="btn btn-default">Motel</button>
+                </div>
+                 <div class="form-group">
+                	<label class="control-label">Roommate Age Range:</label></br>
+                	<select class="form-control">
+                		<option>Min</option>
+                		<option>18</option>
+                		<option>19</option>
+                		<option>20</option>
+                		<option>21</option>
+                		<option>22</option>
+                		<option>23</option>
+                		<option>24</option>
+                	</select>
+                	<select class="form-control">
+                		<option>Max</option>
+                		<option>18</option>
+                		<option>19</option>
+                		<option>20</option>
+                		<option>21</option>
+                		<option>22</option>
+                		<option>23</option>
+                		<option>24</option>
+                	</select>
+                </div>
+                
+            </div>
+            <div class="col-md-9 no-padding-right">
+                
+    
+        <table class="jh-table table table-striped">
+            <thead>
+                <tr>
+                    <th><span data-translate="global.field.id">ID</span></th>
+                    
+                    <th><span data-translate="roommateApp.easyroommate.address">Address</span></th>
+                   
+                    <th><span data-translate="roommateApp.easyroommate.rent_per_a_month">Rent Per A Month</span></th>
+                    <th><span data-translate="roommateApp.easyroommate.property_type">Property Type</span></th>
+                    <th><span data-translate="roommateApp.easyroommate.age_range">Age Range</span></th>
+                    <th><span data-translate="roommateApp.easyroommate.gender">Gender</span></th>
+                    
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="easyroommate in vm.easyroommates track by easyroommate.id">
+                    <td><a ui-sref="easyroommate-detail({id:easyroommate.id})">{{easyroommate.id}}</a></td>
+                    
+                    <td>{{easyroommate.address}}</td>
+                    
+                    <td>{{easyroommate.rent_per_a_month}}</td>
+                    <td>{{easyroommate.property_type}}</td>
+                    <td>{{easyroommate.age_range}}</td>
+                    <td>{{easyroommate.gender}}</td>
+                    
+                    <td class="text-right">
+                        <div class="btn-group flex-btn-group-container">
+                            <button type="submit"
+                                    ui-sref="easyroommate-detail({id:easyroommate.id})"
+                                    class="btn btn-info btn-sm">
+                                <span class="glyphicon glyphicon-eye-open"></span>
+                                <span class="hidden-xs hidden-sm" data-translate="entity.action.view"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="easyroommate-map({id:easyroommate.id})"
+                                    class="btn btn-primary btn-sm">
+                                <span class="glyphicon glyphicon-map-marker"></span>
+                                <span class="hidden-xs hidden-sm" data-translate="entity.action.map"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="easyroommate.delete({id:easyroommate.id})"
+                                    class="btn btn-danger btn-sm">
+                                <span class="glyphicon glyphicon-remove-circle"></span>
+                                <span class="hidden-xs hidden-sm" data-translate="entity.action.delete"></span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+   
+            </div>
+        </div>
+    </div>
+    
+</div>
